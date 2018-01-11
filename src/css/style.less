@@ -1,0 +1,81 @@
+@import "_reset";
+
+//Size
+@FontSize: 30px;
+@em-FontSize: 1em / @FontSize;
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    background-image: url('../i/bg.jpg');
+    background-repeat: repeat;
+    font-size: @FontSize;
+}
+
+.container {
+    display: block;
+    width: 100%;
+    max-width: 490px;
+    margin: 46px auto 0 auto;
+    //outline: 1px solid #18e3e5;
+    font-family: 'Arial';
+}
+
+.tabs {
+
+    &__nav {
+
+    }
+
+    &__link {
+        display: inline-block;
+        text-align: center;
+        padding: 9px 15px;
+        float: left;
+        font-size: @em-FontSize * 14px;
+        color: #fff;
+        text-decoration: none;
+        margin-right: 9px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        background: -moz-linear-gradient(top, #0685b4 5%, #1f68ac 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #0685b4 5%,#1f68ac 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #0685b4 5%,#1f68ac 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        text-shadow: 0px -1px 0 rgba(0, 0, 0, 0.38);
+
+        &_active {
+            -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.31);
+            -moz-box-shadow:    0px 1px 3px 0px rgba(0, 0, 0, 0.31);
+            box-shadow:         0px 1px 3px 0px rgba(0, 0, 0, 0.31);
+            background: none;
+            background-color: #fff;
+            color: #000;
+            text-shadow: none;
+        }
+
+    }
+
+    &__item {
+        display: none;
+        min-height: 278px;
+        background-color: #fff;
+        border-radius: 3px;
+        border-top-left-radius: 0;
+        position: relative;
+        -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.31);
+        -moz-box-shadow:    0px 1px 3px 0px rgba(0, 0, 0, 0.31);
+        box-shadow:         0px 1px 3px 0px rgba(0, 0, 0, 0.31);
+
+        &_active {
+            display: block;
+        }
+    }
+
+    &__content {
+
+    }
+}//.tabs

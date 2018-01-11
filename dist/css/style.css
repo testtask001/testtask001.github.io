@@ -1,0 +1,177 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body {
+  background-image: url('../i/bg.jpg');
+  background-repeat: repeat;
+  font-size: 30px;
+}
+.container {
+  display: block;
+  width: 100%;
+  max-width: 490px;
+  margin: 46px auto 0 auto;
+  font-family: 'Arial';
+}
+.tabs__link {
+  display: inline-block;
+  text-align: center;
+  padding: 9px 15px;
+  float: left;
+  font-size: 0.46666667em;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 9px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #0685b4 5%, #1f68ac 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  text-shadow: 0px -1px 0 rgba(0, 0, 0, 0.38);
+}
+.tabs__link_active {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.31);
+  background: none;
+  background-color: #fff;
+  color: #000;
+  text-shadow: none;
+}
+.tabs__item {
+  display: none;
+  min-height: 278px;
+  background-color: #fff;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  position: relative;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.31);
+}
+.tabs__item_active {
+  display: block;
+}
