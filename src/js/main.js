@@ -1,4 +1,9 @@
 $(function() {
+    //Scrollbar
+    $(window).on("load",function(){
+        $(".content").mCustomScrollbar();
+    });
+
     //switch tabs
     $('.js-tabs__link').on("click", function(e) {
         e.preventDefault();
@@ -10,7 +15,6 @@ $(function() {
         $($tabActive).addClass('tabs__item_active');
         $($this).addClass('tabs__link_active');
     });
-
 
 
 });

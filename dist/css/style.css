@@ -187,14 +187,14 @@ body {
 }
 .tabs__content {
   display: block;
-  padding: 15px 28px 15px 15px;
+  padding: 15px 0 15px 15px;
   box-sizing: border-box;
+  height: 278px;
 }
 .profile__blockFoto {
   width: 30%;
   display: inline-block;
   float: left;
-  height: 278px;
   text-align: center;
 }
 .profile__wrapperImg {
@@ -224,7 +224,6 @@ body {
   width: 70%;
   display: inline-block;
   float: left;
-  height: 278px;
   padding-top: 10px;
   padding-left: 20px;
   box-sizing: border-box;
@@ -260,6 +259,7 @@ body {
 .profile__field_name {
   font-size: 0.76666667em;
   margin-bottom: 4px;
+  text-transform: capitalize;
 }
 .profile__field_city {
   font-size: 0.36666667em;
@@ -297,4 +297,64 @@ body {
 .profile__hobby:hover {
   color: #000;
   background-color: #f3f3f3;
+}
+.friends {
+  display: block;
+  height: 248px;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+.friends__item {
+  display: block;
+  width: 50%;
+  float: left;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+.friends__item:nth-last-child(1),
+.friends__item:nth-last-child(2) {
+  margin-bottom: 0;
+}
+.friends__name {
+  display: block;
+  font-size: 0.43333333em;
+  color: #1574af;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+.friends__name:hover {
+  text-decoration: none;
+}
+.friends__city {
+  display: block;
+  font-size: 0.36666667em;
+  color: #373737;
+}
+.friends__online {
+  display: block;
+  font-size: 0.33333333em;
+  color: #2f8a26;
+  font-style: italic;
+  text-transform: capitalize;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.friends__img {
+  float: left;
+  border-radius: 2px;
+}
+.friends__blockDescription {
+  display: block;
+  width: 145px;
+  float: left;
+  padding-top: 2px;
+  margin-left: 16px;
+  height: 62px;
+  box-sizing: border-box;
+  position: relative;
 }
