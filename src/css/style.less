@@ -4,10 +4,24 @@
 @FontSize: 30px;
 @em-FontSize: 1em / @FontSize;
 
-.clearfix:after {
+//Colors
+@ColorBlue: #1574af;
+
+
+.clearfix:after, .row:after {
     content: "";
     display: table;
     clear: both;
+}
+
+.row {
+    display: block;
+}
+
+.col-6 {
+    display: block;
+    width: 50%;
+    float: left;
 }
 
 body {
@@ -19,7 +33,9 @@ body {
 .container {
     display: block;
     width: 100%;
-    max-width: 490px;
+    max-width: 510px;
+    padding: 0 10px;
+    box-sizing: border-box;
     margin: 46px auto 0 auto;
     //outline: 1px solid #18e3e5;
     font-family: 'Arial';
@@ -61,7 +77,6 @@ body {
 
     &__item {
         display: none;
-        min-height: 278px;
         background-color: #fff;
         border-radius: 3px;
         border-top-left-radius: 0;
@@ -76,6 +91,143 @@ body {
     }
 
     &__content {
-
+        display: block;
+        padding: 15px 28px 15px 15px;
+        box-sizing: border-box;
+        //height: 278px;
     }
 }//.tabs
+
+.profile {
+    &__blockFoto {
+        width: 30%;
+        display: inline-block;
+        float: left;
+        height: 278px;
+        text-align: center;
+    }
+
+    &__wrapperImg {
+        display: block;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            -webkit-box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.32);
+            -moz-box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.32);
+            box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.32);
+            border-radius: 2px;
+            z-index: 10;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 6px;
+        position: relative;
+        border-radius: 2px;
+    }
+
+    &__blockInfo {
+        width: 70%;
+        display: inline-block;
+        float: left;
+        height: 278px;
+        padding-top: 10px;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+
+    &__addFriend {
+        display: block;
+        text-align: center;
+        padding: 9px 15px;
+        font-size: @em-FontSize * 12px;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 2px;
+        background: -moz-linear-gradient(top, #e68200 5%, #e65200 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #e68200 5%,#e65200 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #e68200 5%,#e65200 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        text-shadow: 0px -1px 0 rgba(0, 0, 0, 0.43);
+        -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow:    0px 1px 2px 0px rgba(0, 0, 0, 0.38);
+        box-shadow:         0px 1px 2px 0px rgba(0, 0, 0, 0.38);
+    }
+
+    &__wrapInfo {
+        margin-bottom: 28px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__list {
+        margin-bottom: 11px;
+    }
+
+    &__field {
+        display: block;
+        font-size: @em-FontSize * 12px;
+
+        &_name {
+            font-size: @em-FontSize * 23px;
+            margin-bottom: 4px;
+        }
+
+        &_city {
+            font-size: @em-FontSize * 11px;
+            color: #757575;
+        }
+
+        &_label {
+            font-weight: bold;
+        }
+
+        &_email {
+            color: @ColorBlue;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }//.profile__field
+
+    &__listHobby {
+        margin-top: 7px;
+    }
+
+    &__hobby {
+        display: inline-block;
+        float: left;
+        font-size: @em-FontSize * 12px;
+        color: @ColorBlue;
+        border: 1px solid #d5d5d5;
+        border-radius: 2px;
+        padding: 5px 8px;
+        text-transform: lowercase;
+        margin-right: 3px;
+        text-decoration: none;
+        background-color: #fff;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        &:hover {
+            color: #000;
+            background-color: #f3f3f3;
+        }
+    }
+
+
+}//.profile
