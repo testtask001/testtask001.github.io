@@ -167,7 +167,7 @@ body {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   text-shadow: 0px -1px 0 rgba(0, 0, 0, 0.38);
 }
-.tabs__link_active {
+.tabs__link.active {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.31);
   background: none;
   background-color: #fff;
@@ -182,14 +182,16 @@ body {
   position: relative;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.31);
 }
-.tabs__item_active {
+.tabs__item.active {
   display: block;
 }
 .tabs__content {
   display: block;
   padding: 15px 0 15px 15px;
   box-sizing: border-box;
-  height: 278px;
+}
+.profile {
+  padding-right: 27px;
 }
 .profile__blockFoto {
   width: 30%;
@@ -246,6 +248,9 @@ body {
 .profile__wrapInfo {
   margin-bottom: 28px;
 }
+.profile__wrapInfo_title {
+  min-height: 38px;
+}
 .profile__wrapInfo:last-child {
   margin: 0;
 }
@@ -255,11 +260,13 @@ body {
 .profile__field {
   display: block;
   font-size: 0.4em;
+  cursor: pointer;
 }
 .profile__field_name {
   font-size: 0.76666667em;
   margin-bottom: 4px;
   text-transform: capitalize;
+  min-height: 22px;
 }
 .profile__field_city {
   font-size: 0.36666667em;
@@ -288,6 +295,7 @@ body {
   padding: 5px 8px;
   text-transform: lowercase;
   margin-right: 3px;
+  margin-bottom: 3px;
   text-decoration: none;
   background-color: #fff;
 }
@@ -297,6 +305,42 @@ body {
 .profile__hobby:hover {
   color: #000;
   background-color: #f3f3f3;
+}
+.profile__hobby_addHobby {
+  text-transform: none;
+  background-color: #399edc;
+  color: #fff;
+  border-color: #1574af;
+  float: left;
+}
+.profile__hobby_addHobby:hover {
+  background-color: #1574af;
+  color: #fff;
+}
+.profile__input {
+  display: inline-block;
+  float: left;
+  font-size: 0.4em;
+  padding: 4px 8px;
+  border: 1px solid #d5d5d5;
+  color: #000;
+  border-radius: 2px;
+  margin-right: 3px;
+  box-sizing: border-box;
+}
+.profile__input_hobbyStyle {
+  width: 100px;
+}
+.profile__input_editStyle {
+  font-size: 100%;
+  margin-top: -4px;
+  margin-left: -5px;
+  position: absolute;
+  padding: 2px 4px;
+}
+.profile__input:focus {
+  border-color: #399edc;
+  outline: none;
 }
 .friends {
   display: block;
@@ -311,11 +355,11 @@ body {
   width: 50%;
   float: left;
   text-decoration: none;
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
-.friends__item:nth-last-child(1),
-.friends__item:nth-last-child(2) {
-  margin-bottom: 0;
+.friends__item:nth-child(1),
+.friends__item:nth-child(2) {
+  margin-top: 0;
 }
 .friends__name {
   display: block;

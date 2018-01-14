@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="Expires" content="-1" >
         <title>Тетовое задание</title>
         <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
         <link rel="stylesheet" href="css/style.css"/>
@@ -12,46 +13,44 @@
         <div class="container">
             <div class="tabs">
                 <div class="tabs__nav clearfix">
-                    <a href="#profile" class="tabs__link js-tabs__link tabs__link_active">Профиль</a><!--tabs__link-->
+                    <a href="#profile" class="tabs__link js-tabs__link active">Профиль</a><!--tabs__link-->
                     <a href="#friends" class="tabs__link js-tabs__link">Друзья пользователя</a><!--tabs__link-->
                 </div><!--tabs__nav-->
-                <div id="profile" class="tabs__item js-tabs__item tabs__item_active">
+                <div id="profile" class="tabs__item js-tabs__item active">
                     <div class="tabs__content">
                         <div class="profile clearfix">
                             <div class="profile__blockFoto">
                                 <div class="profile__wrapperImg">
                                     <img class="profile__img" src="i/content/user.jpg" alt="Виталя Гора">
                                 </div>
-
                                 <a href="#" class="profile__addFriend">Добавить в друзья</a>
                             </div><!--profile__foto-->
                             <div class="profile__blockInfo">
-                                <div class="profile__wrapInfo">
-                                    <h1 class="profile__field profile__field_name">виталя Гора</h1>
-                                    <span class="profile__field profile__field_city">г. Нижние Шахты</span>
+                                <div class="profile__wrapInfo profile__wrapInfo_title clearfix">
+                                    <h1 id="name" class="profile__field profile__field_name js-field"></h1>
+                                    <span id="city" class="profile__field profile__field_city js-field"></span>
                                 </div><!--profile__wrapHeader-->
                                 <div class="profile__wrapInfo">
                                     <div class="row profile__list">
                                         <span class="profile__field profile__field_label col-6">Семейное положение</span>
-                                        <span class="profile__field col-6">холост</span>
+                                        <span id="status" class="profile__field col-6 js-field"></span>
                                     </div>
                                     <div class="row profile__list">
                                         <span class="profile__field profile__field_label col-6">Телефон</span>
-                                        <span class="profile__field col-6">+7 (440) 554-32-12</span>
+                                        <span id="phone" class="profile__field col-6 js-field"></span>
                                     </div>
                                     <div class="row profile__list">
                                         <span class="profile__field profile__field_label col-6">E-mail</span>
-                                        <a href="mailto:vitalya@gora.ru" class="profile__field profile__field_email col-6">vitalya@gora.ru</a>
+                                        <a id="email" href="#" class="profile__field profile__field_email col-6 js-field"></a>
                                     </div>
                                 </div><!--profile__wrapContacts-->
                                 <div class="profile__wrapInfo">
                                     <div class="profile__list">
                                         <span class="profile__field profile__field_label">Интересы</span>
+                                        <div class="profile__listHobby js-listHobby row"></div>
                                         <div class="profile__listHobby row">
-                                            <a href="#" class="profile__hobby">музыка</a>
-                                            <a href="#" class="profile__hobby">компьютеры</a>
-                                            <a href="#" class="profile__hobby">Радио</a>
-
+                                            <input class="profile__input profile__input_hobbyStyle js-newHobby" type="text" name="" placeholder="интерес" value="">
+                                            <a href="#" id="addHobby" class="profile__hobby profile__hobby_addHobby">Добавить интерес</a>
                                         </div>
                                     </div>
                                 </div><!--profile__wrapHobby-->
@@ -169,6 +168,8 @@
 
         <script type="text/javascript" src="js/libs/jquery.min.js"></script>
         <script type="text/javascript" src="js/libs/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.maskedinput.min.js"></script>
+        <script type="text/javascript" src="js/myFunction.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>

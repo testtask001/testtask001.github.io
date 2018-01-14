@@ -66,7 +66,7 @@ body {
         background: linear-gradient(to bottom, #0685b4 5%,#1f68ac 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         text-shadow: 0px -1px 0 rgba(0, 0, 0, 0.38);
 
-        &_active {
+        &.active {
             -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.31);
             -moz-box-shadow:    0px 1px 3px 0px rgba(0, 0, 0, 0.31);
             box-shadow:         0px 1px 3px 0px rgba(0, 0, 0, 0.31);
@@ -88,7 +88,7 @@ body {
         -moz-box-shadow:    0px 1px 3px 0px rgba(0, 0, 0, 0.31);
         box-shadow:         0px 1px 3px 0px rgba(0, 0, 0, 0.31);
 
-        &_active {
+        &.active {
             display: block;
         }
     }
@@ -97,11 +97,13 @@ body {
         display: block;
         padding: 15px 0 15px 15px;
         box-sizing: border-box;
-        height: 278px;
+        //height: 278px;
     }
 }//.tabs
 
 .profile {
+    padding-right: 27px;
+
     &__blockFoto {
         width: 30%;
         display: inline-block;
@@ -166,6 +168,10 @@ body {
     &__wrapInfo {
         margin-bottom: 28px;
 
+        &_title {
+            min-height: 38px;
+        }
+
         &:last-child {
             margin: 0;
         }
@@ -178,11 +184,13 @@ body {
     &__field {
         display: block;
         font-size: @em-FontSize * 12px;
+        cursor: pointer;
 
         &_name {
             font-size: @em-FontSize * 23px;
             margin-bottom: 4px;
             text-transform: capitalize;
+            min-height: 22px;
         }
 
         &_city {
@@ -218,6 +226,7 @@ body {
         padding: 5px 8px;
         text-transform: lowercase;
         margin-right: 3px;
+        margin-bottom: 3px;
         text-decoration: none;
         background-color: #fff;
 
@@ -228,6 +237,49 @@ body {
         &:hover {
             color: #000;
             background-color: #f3f3f3;
+        }
+
+        &_addHobby {
+            text-transform: none;
+            background-color: #399edc;
+            color: #fff;
+            border-color: #1574af;
+            float: left;
+
+            &:hover {
+                background-color: @ColorBlue;
+                color: #fff;
+            }
+        }
+    }//.profile__hobby
+
+    &__input {
+        display: inline-block;
+        float: left;
+        font-size: @em-FontSize * 12px;
+        padding: 4px 8px;
+        border: 1px solid #d5d5d5;
+        color: #000;
+        border-radius: 2px;
+        margin-right: 3px;
+        box-sizing: border-box;
+
+        &_hobbyStyle {
+            width: 100px;
+        }
+
+
+        &_editStyle {
+            font-size: 100%;
+            margin-top: -4px;
+            margin-left: -5px;
+            position: absolute;
+            padding: 2px 4px;
+        }
+
+        &:focus {
+            border-color: #399edc;
+            outline: none;
         }
     }
 }//.profile
@@ -247,10 +299,10 @@ body {
         width: 50%;
         float: left;
         text-decoration: none;
-        margin-bottom: 30px;
+        margin-top: 30px;
 
-        &:nth-last-child(1), &:nth-last-child(2) {
-            margin-bottom: 0;
+        &:nth-child(1), &:nth-child(2) {
+            margin-top: 0;
         }
     }
 
