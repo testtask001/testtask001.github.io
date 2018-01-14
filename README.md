@@ -1,1 +1,4 @@
-# testtask001.github.io
+# Тестовое задание
+Исходники - папка src
+Сборка проекта - папка dist
+Страница просмотра проекта https://testtask001.github.io/dist/
